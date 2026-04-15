@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #f7f9fc, #eef3f8);
+  color: #2f3a4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #24415c, #3f6b8f);
+  color: white;
+  padding: 1.25rem 2rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.navbar h1 {
+  margin: 0 0 0.9rem 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+.content {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  color: #2c4661;
+}
+
+h3 {
+  color: #35516d;
+  margin-bottom: 0.75rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 450px;
+  margin: 0 auto 2rem auto;
+  background: white;
+  padding: 1.25rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(44, 70, 97, 0.08);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #d5deea;
+  border-radius: 10px;
+  font-size: 0.98rem;
+  font-family: inherit;
+  background-color: #fbfcfe;
+  color: #2f3a4a;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6aa6d9;
+  box-shadow: 0 0 0 3px rgba(106, 166, 217, 0.18);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+button {
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, #4ea3e3, #3189cf);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(49, 137, 207, 0.25);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.meeting-card,
+.activity-card,
+.dashboard-card {
+  background: white;
+  padding: 1.15rem;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(44, 70, 97, 0.08);
+  border: 1px solid rgba(220, 228, 238, 0.8);
+}
+
+.meeting-card h4,
+.activity-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+  color: #2f4d69;
+  font-size: 1.2rem;
+}
+
+.meeting-card p,
+.activity-card p,
+.dashboard-card p {
+  margin: 0.35rem 0;
+  line-height: 1.45;
+}
+
+.meeting-card button,
+.activity-card button {
+  margin-top: 0.85rem;
+  margin-right: 0.6rem;
+}
+
+.dashboard {
+  padding: 0.5rem 0;
+}
+
+.dashboard h2 {
+  margin-bottom: 1.25rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.dashboard-card {
+  text-align: center;
+}
+
+.full-width {
+  margin-top: 1rem;
+}
+
+.big-number {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #3189cf;
+  margin-top: 0.5rem;
+}
+
+.badge-image {
+  width: 120px;
+  max-width: 100%;
+  margin-top: 0.75rem;
+  border-radius: 12px;
+}
+
+.mini-meeting {
+  text-align: left;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #f5f8fc;
+  border-radius: 10px;
+  border-left: 4px solid #7db8e8;
+}
+
+.mini-meeting strong {
+  color: #2f4d69;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.2rem;
+  }
+
+  .navbar h1 {
+    font-size: 2rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-card:nth-child(3) {
+  background: linear-gradient(to bottom, #fffdf3, #fff8d9);
+}
+
+select {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #d5deea;
+  border-radius: 10px;
+  font-size: 0.98rem;
+  font-family: inherit;
+  background-color: #fbfcfe;
+  color: #2f3a4a;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #6aa6d9;
+  box-shadow: 0 0 0 3px rgba(106, 166, 217, 0.18);
+}
